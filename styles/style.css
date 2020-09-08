@@ -57,13 +57,18 @@ p {
   line-height: 1.3rem;
 }
 
-.information-container i {
+.location-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.location-container i {
   margin-right: 10px;
   font-size: 1.3rem;
   color: #e88873;
 }
 
-.information-container span {
+.location-container span {
   margin: 5px 0;
 }
 
@@ -223,7 +228,81 @@ textarea {
   color: #fff;
 }
 
+/* Media Query */
 
+/* Small Screens */
+
+@media screen and (max-width: 414px) {
+
+  .container {
+    height: 750px;
+  }
+
+  /* Information Container */
+
+  .information-container {
+    height: 50%;
+    width: 100%;
+    top: 0;
+    left: 0;
+  }
+
+  h1 {
+    font-size: 1.1rem;
+  }
+
+  .information-container p {
+    font-size: 0.8rem;
+  }
+
+  .location-container {
+    flex-direction: row;
+  }
+
+  .location-container i {
+    font-size: 1rem;
+    margin-right: 5px;
+  }
+
+  .location-container span {
+    font-size: 0.8rem;
+    margin-right: 10px;
+  }
+
+  /* Form container */
+
+  .form-container {
+    left: 0;
+    top: 50%;
+    width: 100%;
+    height: 50%;
+    border-radius: 0 0 10px 10px;
+  }
+
+  .form-container::before {
+    position: absolute;
+    content: '';
+    width: 26px;
+    height: 26px;
+    background: linear-gradient(to bottom, #e2a191, #e3a190);
+    top: -5px;
+    left: 50%;
+    transform: translateX(-50%) rotate(45deg);
+  }
+
+  .input {
+    padding: 6px 15px;
+    font-size: 0.8rem;
+  }
+
+  label {
+    font-size: 0.8rem;
+  }
+
+  .input-container span {
+    font-size: 1rem;
+  }
+}
 
 
 
