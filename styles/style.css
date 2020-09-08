@@ -155,6 +155,7 @@ label {
   left: 1rem;
   transition: 0.5s;
   z-index: 500;
+  cursor: text;
 }
 
 .input-container span {
@@ -165,6 +166,7 @@ label {
   font-size: 1.2rem;
   color: transparent;
   background: transparent;
+  pointer-events: none;
 }
 
 .input-container span::before,
@@ -192,6 +194,7 @@ label {
   top: 0;
   left: 21px;
   transform: translateY(-50%);
+  cursor: default;
 }
 
 .input-container.focus span::before,
